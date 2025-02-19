@@ -7,6 +7,8 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @Entity(name = "show_seats")
@@ -17,4 +19,5 @@ public class ShowSeat extends BaseModel{
     private Seat seat; // [M:1]
     @Enumerated(EnumType.ORDINAL)
     private SeatStatus seatStatus;
+    private Date blockedAt;
 }
